@@ -1,0 +1,56 @@
+{% extends 'base.twig' %}
+
+{% block pagetitle %}Welcome{% endblock %}
+
+{% block homeactive %}<li><span class="active">ACI HelloWorld Demo</span></li>{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <div class="media">
+                <div class="media-left">
+                    <img src="/assets/images/microsoft_azure_container_registry.svg" alt="Microsoft Azure Container Registry" width="180" height="180">
+                </div>
+                <div class="media-body">
+                    <h1 class="h1 media-heading azure-blue">{{ block('pagetitle') }}</h1>
+                    <p>This is a demo application to demonstrate the usage of <a href="https://azure.microsoft.com/en-us/services/container-registry/"
+                    title="Microsoft Azure Container Registry" target="_blank" rel="nofollow">Microsoft Azure Container Registry</a>. Simplify container development by easily storing
+                    and managing container images for Azure deployments in a central registry.</p>
+                </div>
+            </div>
+        </div><!-- /.jumbotron -->
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <h2 class="h2 azure-blue"><span class="glyphicon glyphicon-cloud"></span> Azure Cloud</h2>
+                <p>Microsoft Azure offers an extensive cloud solution for small and big projects. Check them out
+                and try them for free at <a href="https://azure.microsoft.com" target="_blank" rel="nofollow">azure.microsoft.com</a>.</p>
+            </div><!-- /.col-md-4 -->
+
+            <div class="col-md-4">
+                <h2 class="h2 azure-blue"><span class="glyphicon glyphicon-hourglass"></span> Rapid Deployment</h2>
+                <p>Build your app locally and deploy it quickly and secure on the cloud with just a few
+                steps.</p>
+                <p>This is an example application using PHP 7 and a SQLite database.</p>
+            </div><!-- /.col-md-4 -->
+
+            <div class="col-md-4">
+                <h2 class="h2 azure-blue"><span class="glyphicon glyphicon-education"></span> Learn more</h2>
+                <p>Check out <a href="http://www.dragonbe.com" title="Dragonbe.com" target="_blank" rel="nofollow">my blog</a> for more
+                    interesting articles and ideas. Feel free to leave comments and feedback on my articles.</p>
+            </div><!-- /.col-md-4 -->
+
+        </div><!-- /.row -->
+
+        <div class="text-center">
+
+            <a href="/books" class="btn btn-info" title="My book recommendations"><span class="glyphicon glyphicon-triangle-right"></span> My book recommendations</a>
+
+        </div>
+
+    </div><!-- /.container -->
+
+{% endblock %}
