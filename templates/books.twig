@@ -17,12 +17,15 @@
                 <div class="media">
 
                     <div class="media-left">
-                        <img src="{{ book.image|escape }}" width="150" alt="{{ book.title|escape }}">
+                        <a href="{{ book.affiliate_link|escape }}" title="Buy this book on amazon.com" target="_blank" rel="nofollow">
+                            <img src="{{ book.image|escape }}" width="150" alt="{{ book.title|escape }}">
+                        </a>
                     </div>
                     <div class="media-body">
-                        <h3 class="h3 media-heading azure-blue">{{ book.title|escape }}</h3>
+                        <a href="{{ book.affiliate_link|escape }}" title="Buy this book on amazon.com" target="_blank" rel="nofollow"><h3 class="h3 media-heading azure-blue">{{ book.title|escape }}</h3></a>
                         <p><strong>Author(s):</strong> {{ book.authors|escape }}</p>
                         <p>{{ book.abstract|escape|nl2br }}</p>
+                        <p><a href="{{ book.affiliate_link|escape }}" class="btn btn-info" title="Buy this book on amazon.com" target="_blank" rel="nofollow">Buy now on amazon.com</a></p>
                     </div>
 
                 </div>

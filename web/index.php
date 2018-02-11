@@ -44,7 +44,7 @@ $app->get('/', function () use ($app) {
 
 $app->get('/books', function () use ($app) {
 
-    $bStmt = $app['pdo']->query('SELECT b.title, b.abstract, b.isbn, b.image, GROUP_CONCAT(a.name) authors FROM book b JOIN author_book ab ON b.id = ab.book_id LEFT JOIN author a ON ab.author_id = a.id GROUP BY b.id ORDER BY b.title');
+    $bStmt = $app['pdo']->query('SELECT b.title, b.abstract, b.isbn, b.image, GROUP_CONCAT(a.name) authors, af.affiliate_link FROM book b JOIN author_book ab ON b.id = ab.book_id INNER JOIN affiliate af ON b.id = af.book_id LEFT JOIN author a ON ab.author_id = a.id GROUP BY b.id ORDER BY b.title');
     $books = $bStmt->fetchAll();
 
     return $app['twig']->render('books.twig', [
